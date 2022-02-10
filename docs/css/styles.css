@@ -14,6 +14,7 @@ ul li{list-style:none;}
 img{vertical-align:top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 
+
 .logo {
     margin: auto;
     width: 200px;
@@ -29,7 +30,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 
  .ready {
  
-   animation: zoom 0.5s ease-out forwards, 
+   animation: zoom 2s ease-out forwards, 
               opacity 0.7s ease-in forwards;
     
 }
@@ -40,18 +41,44 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
    width: 100%;
 }
 
+.clear {
+    animation: clear 4s ease-in forwards;
+}
+@keyframes clear {
+    50% { 
+        opacity: 1;
+}
+    100% {
+        opacity: 0.1;
+    }
+}
+
 @keyframes zoom {
     0% {
         width: 5%;
         height: 6.666%;
     }
    
-    100% {
+    25% {
        width: 25%;
         height: 33.333%;
         
     }
-   
+    50% {
+        width: 50%;
+         height: 33.333%;
+         top: 50%;
+    left: 50%;
+         
+     }
+   100% {
+    width: 16%;
+    height: 11.111%;
+    top: 10%;
+    
+
+    
+   }
 }
 
 @keyframes opacity {
