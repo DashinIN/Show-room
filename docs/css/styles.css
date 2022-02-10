@@ -42,13 +42,13 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 
 @keyframes zoom {
     0% {
-        width: 200px;
-        height: 100px;
+        width: 5%;
+        height: 6.666%;
     }
    
     100% {
-        width: 600px;
-        height: 300px;
+       width: 25%;
+        height: 33.333%;
         
     }
    
