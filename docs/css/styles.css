@@ -14,20 +14,30 @@ ul li{list-style:none;}
 img{vertical-align:top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 
-.test {
+.logo {
     margin: auto;
     width: 200px;
     height: 100px;
-    background: #000;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
     opacity: 0;
+    transform: translate(-50%, -50%);
 }
 
-.ready .test {
-    animation: fadeUp 3s linear forwards,
-    zoom 5s linear forwards;
-    
-   
 
+ .ready {
+ 
+   animation: zoom 0.5s ease-out forwards, 
+              opacity 0.7s ease-in forwards;
+    
+}
+
+.wraper {
+   background-color: black;
+   height: 100%;
+   width: 100%;
 }
 
 @keyframes zoom {
@@ -35,27 +45,24 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
         width: 200px;
         height: 100px;
     }
-    40% {
+   
+    100% {
         width: 600px;
         height: 300px;
+        
     }
-    100% {
-        width: 200px;
-        height: 100px;
-    }
+   
 }
 
-@keyframes fadeUp {
+@keyframes opacity {
     0% {
-        transform: translateY(50vh);
+        opacity: 0;
     }
-  20% {
-    transform: translateY(50vh);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+   
+    100% {
+        opacity: 1;
+    }
+   
 }
 
 

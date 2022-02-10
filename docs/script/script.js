@@ -1,3 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-	document.body.classList.add('ready');
+
+	let a = document.querySelector(".logo");
+	a.classList.add("ready");
+
 });
