@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 document.addEventListener('DOMContentLoaded', function() {
 
-	let a = document.querySelector(".wraper");
+	let a = document.querySelector(".logo-back");
 	a.classList.add("clear");
 
 });
