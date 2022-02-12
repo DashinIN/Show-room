@@ -27,8 +27,9 @@ body {
 
 .logo {
     margin: auto;
-    width: 200px;
-    height: 100px;
+    width: 100px;
+    height: 50px;
+    min-height: 50px;
     background: rgb(255, 255, 255);
     position: absolute;
     top: 50%;
@@ -40,9 +41,8 @@ body {
 
 
  .ready {
- 
-         animation: zoom 2s ease-out forwards, 
-              opac 0.7s ease-in forwards;
+    animation: zoom 2s ease-out forwards, 
+               opac 0.7s ease-in forwards;
     
 }
 
@@ -70,6 +70,38 @@ body {
 
 @keyframes zoom {
     0% {
+        width: 8%;
+        height: 3%;
+    }
+   
+    25% {
+       width: 25%;
+        height: 15%;
+        
+    }
+    50% {
+        width: 50%;
+         height: 15%;
+         top: 50%;
+        left: 50%;
+         
+     }
+   100% {
+    width: 20%;
+    height: 7%;
+    top: 50px;
+    left: 15%;
+    
+
+    
+   }
+}
+
+
+@media (min-width: 800px) {
+
+@keyframes zoom {
+    0% {
         width: 5%;
         height: 6.666%;
     }
@@ -89,11 +121,13 @@ body {
    100% {
     width: 16%;
     height: 11.111%;
-    top: 10%;
+    top: calc(50px + 3vh);
     
 
     
    }
+}
+
 }
 
 @keyframes opac {
@@ -120,17 +154,27 @@ body {
 
 .nav__list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
 }
 
 .nav__settings {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: end;
 }
 
 .nav__list-item > a {
     color: white;
+}
+
+@media (min-width: 800px) {
+    .nav__list  {
+        flex-direction: row;
+    }
+
+    .nav__settings {
+        flex-direction: row;
+    }
 }
 
