@@ -7,12 +7,10 @@
     "scripts": {
       "build:sass": "sass  --no-source-map src/sass:docs/css",
       "copy:img": "copyfiles -u 1 ./src/img/**/* docs",
-      "copy:audio": "copyfiles -u 1 ./src/audio/**/* docs",
       "copy:html": "copyfiles -u 1 ./src/*.html docs",
       "copy:script": "copyfiles -u 1 ./src/script/*.js docs",
       "copy": "npm-run-all --parallel copy:*",
       "watch:img": "onchange \"src/img/**/*\" -- npm run copy:img",
-      "watch:audio": "onchange \"src/audio/**/*\" -- npm run copy:audio",
       "watch:html": "onchange \"src/*.html\" -- npm run copy:html",
       "watch:script": "onchange \"src/script/*.jsl\" -- npm run copy:script",
       "watch:sass": "sass  --no-source-map --watch src/sass:docs/css",
