@@ -9,13 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
 const audio = document.querySelectorAll('audio');
 const items = document.querySelectorAll(".flexitem");
-const links = document.querySelectorAll(".linkarea");
 
-	for (let i in items) {
+    for (let i in items) {
 items[i].addEventListener("focusin", () => { audio[i].play();});
 items[i].addEventListener("focusout", () => { audio[i].pause();});
-}
-    for (let i in items) {
 items[i].addEventListener("mouseenter", () => { audio[i].play();});
 items[i].addEventListener("mouseleave", () => { audio[i].pause();});
 }

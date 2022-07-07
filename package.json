@@ -12,7 +12,7 @@
       "copy": "npm-run-all --parallel copy:*",
       "watch:img": "onchange \"src/img/**/*\" -- npm run copy:img",
       "watch:html": "onchange \"src/*.html\" -- npm run copy:html",
-      "watch:script": "onchange \"src/script/*.jsl\" -- npm run copy:script",
+      "watch:script": "onchange \"src/script/*.js\" -- npm run copy:script",
       "watch:sass": "sass  --no-source-map --watch src/sass:docs/css",
       "watch": "npm-run-all --parallel watch:*",
       "serve": "browser-sync start --server docs --files docs",
