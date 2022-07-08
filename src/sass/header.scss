@@ -110,9 +110,8 @@
 }
 
 
-.header__nav-item a:hover {
+.header__nav-item a:hover, .header__nav-item a:focus{
     color: $background__color;
-    
     background-color: $text__color;
 }
 
@@ -165,7 +164,7 @@
 
         
     }
-    .header__nav-item a:hover {
+    .header__nav-item a:hover, .header__nav-item a:focus {
         color: $background__color;
         background-color: $text__color;
     }
