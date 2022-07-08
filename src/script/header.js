@@ -33,5 +33,5 @@ function onMenuLinkClick(e) {
         behavior: "smooth"
     });
     }
-    e.preventDefault();
+    
 }

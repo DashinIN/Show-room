@@ -1,6 +1,12 @@
 @import "global";
 @import "header";
 
+
+.header__nav-item:nth-child(2) a{
+    color: $background__color;
+    background-color: $text__color;
+}
+
 .flexbox {
     margin: 0rem auto;
     padding-bottom: 2rem;
