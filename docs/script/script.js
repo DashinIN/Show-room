@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	
 	let a = document.querySelector(".logo-back");
+  let b = document.querySelector("body");
+  b.style.overflow = "all";
 	a.classList.add("clear");
 
 });
