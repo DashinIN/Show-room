@@ -1,6 +1,9 @@
 
-document.addEventListener('DOMContentLoaded', function() {
 
+
+document.addEventListener('DOMContentLoaded', function() {
+	
+	
 	let a = document.querySelector(".logo-back");
 	a.classList.add("clear");
 
@@ -17,3 +20,4 @@ items[i].addEventListener("mouseenter", () => { audio[i].play();});
 items[i].addEventListener("mouseleave", () => { audio[i].pause();});
 }
 });
+

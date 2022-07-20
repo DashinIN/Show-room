@@ -1,5 +1,10 @@
 @import "colors";
 
+body._lock {
+    overflow: hidden;
+    
+}
+
 .header {
     background-color: $background__color;
     display: flex;
