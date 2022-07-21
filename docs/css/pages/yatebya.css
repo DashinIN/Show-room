@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
-* > a:focus-within {
+* > a:focus {
   outline: 1px solid rgb(255, 255, 255);
 }
 
@@ -81,6 +81,14 @@ body {
   min-height: 100vh;
   font-family: "Montserrat", sans-serif;
   background-color: rgb(24, 24, 24);
+}
+
+.blur__layer {
+  width: 102%;
+  height: 102%;
+  transform: translate(-1%, -1%);
+  position: absolute;
+  backdrop-filter: blur(1px);
 }
 
 a {

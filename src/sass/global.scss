@@ -17,7 +17,7 @@ img{vertical-align:top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 
 
-*>a:focus-within  {
+*>a:focus {
     outline: 1px solid $light__color;
 }
 
@@ -28,6 +28,15 @@ body {
     min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
     background-color: $background__color;
+}
+
+.blur__layer {
+  width: 102%;
+  height: 102%;
+  transform: translate(-1%,-1%);
+  position: absolute;
+  backdrop-filter: blur(1px);
+  
 }
 
 
