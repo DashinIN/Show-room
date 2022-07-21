@@ -1,5 +1,15 @@
-
 @import "../colors";
+
+.logo-back {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: $background__color;
+  opacity: 1;
+}
+
 
 .lds-ellipsis {
   display: inline-block;
@@ -7,7 +17,7 @@
   width: 80px;
   height: 80px;
   z-index: 999;
-  top: 50%;
+  top: 50vh;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -63,3 +73,18 @@
 
 
 
+
+
+.clear {
+  animation: clear 0.6s ease-in forwards;
+}
+@keyframes clear {
+  30% { 
+      
+      opacity: 1;
+}
+  100% {
+     
+      opacity: 0;
+  }
+}

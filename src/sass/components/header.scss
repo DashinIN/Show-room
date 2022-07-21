@@ -5,9 +5,7 @@ body._lock {
     
 }
 
-body._lock .flexbox {
-    
-}
+
 
 .header {
     background-color: $background__color;
@@ -204,4 +202,16 @@ body._lock .flexbox {
     .header__nav-item a::before {
         top: 100px;
     }
+}
+
+
+
+@media (min-width: 1500px) {
+.header__row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1500px;
+   
+}
 }

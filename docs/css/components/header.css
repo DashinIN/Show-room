@@ -169,3 +169,11 @@ body._lock {
     top: 100px;
   }
 }
+@media (min-width: 1500px) {
+  .header__row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1500px;
+  }
+}

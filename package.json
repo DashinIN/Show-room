@@ -4,7 +4,7 @@
     "description": "My proj",
     "main": "docs/index.html",
     "author": "DashinIN",
-    "type": "module",
+    
     "scripts": {
         "build:sass": "sass  --no-source-map src/sass:docs/css",
         "copy:img": "copyfiles -u 1 ./src/img/**/* docs",
@@ -27,6 +27,7 @@
         "copyfiles": "^2.4.1",
         "cssnano": "^5.0.17",
         "gsap": "^3.10.4",
+        "locomotive-scroll": "^4.1.4",
         "npm-run-all": "^4.1.5",
         "onchange": "^7.1.0",
         "postcss-cli": "^9.1.0",

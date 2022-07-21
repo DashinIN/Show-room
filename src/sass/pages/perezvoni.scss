@@ -12,7 +12,8 @@
 
 .flexbox {
     margin: 0rem auto;
-    padding-bottom: 2rem;
+    padding-bottom: 0rem;
+    
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -20,6 +21,11 @@
    
 }
 
+@media (min-width:1500px) {
+    .flexbox {
+        max-width: 1500px;
+    }
+}
 
 
  .flexitem{
