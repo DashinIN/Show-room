@@ -1,8 +1,8 @@
 
 
-@import "global";
-@import "header";
-
+@import "../global";
+@import "../components/header";
+@import "../components/preloader";
 
 
 .header__nav-item:nth-child(1) a{

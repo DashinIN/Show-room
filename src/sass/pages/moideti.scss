@@ -1,6 +1,6 @@
-@import "global";
-@import "header";
-
+@import "../global";
+@import "../components/header";
+@import "../components/preloader";
 
 .header__nav-item:nth-child(2) a{
     color: $background__color;
