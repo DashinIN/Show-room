@@ -22,14 +22,7 @@
     max-width: 1200px;
     position: relative;
 
-    .blur__layer {
-        width: 102%;
-        height: 102%;
-        transform: translate(-1%,-1%);
-        position: absolute;
-        backdrop-filter: blur(1px);
-        
-    }
+   
    
 }
 
