@@ -125,6 +125,7 @@ body._lock {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    overflow: hidden;
     transform: translate(0, 0);
     z-index: 0;
     position: static;
