@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
 const audio = document.querySelectorAll('audio');
+for (let i in audio) {
+  audio[i].volume=0.3;
+}
+
 const items = document.querySelectorAll(".flexitem");
 
     for (let i in items) {

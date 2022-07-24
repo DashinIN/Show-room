@@ -3,7 +3,48 @@
 @import "../components/preloader";
 
 
-.anim {
-    width: 200px;
-    height: 350px;
+
+.main {
+
+    display: flex;
+    flex-direction: column;
+    
+
+    section {
+        height: 100vh;
+        background-color: blue;
+     
+    }
+
+    .main__item {
+        height: 100%;
+        flex-basis: 50%;
+        &.left-part {
+            background-color: greenyellow;
+        } 
+        &.right-part {
+            background-color: rgb(245, 98, 0);
+        } 
+    }
+
+    .intro {
+        flex-direction: row;
+        
+    }
+    .songs {
+        background-color: aqua;
+    }
+    
+    .end {
+        background-color: rgb(230, 24, 178);
+    }
+
 }
+
+img.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
