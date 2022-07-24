@@ -22,12 +22,18 @@ button.down {
     display: flex;
     width: 100%;
     height: 100vh;
+    max-height: 100vh;
     flex-direction: column;
     font-weight: 700;
     flex-basis: auto;
     position: relative;
+    margin: 0 auto;
+   
+
+   
     
 }
+
 .header__title {
     color: $text__color;
     padding: 3em 3em;
@@ -35,7 +41,6 @@ button.down {
     font-size: 1rem;
     
 }
-
 
 .header__burger {
     z-index: 5;
@@ -46,56 +51,60 @@ button.down {
     cursor: pointer;
     top: 40px;
     left: 20px;
-}
 
 
+    &:before, &:after, span {
+        left: 0;
+
+        position: absolute;
+        height: 15%;
+        width: 100%;
+        transition: all 0.3s ease-in;
+        background-color: $text__color;
+    }
+    
+    span {
+
+        top: 50%;
+        transform: translate(0px, -50%);
+    }
+
+    &:before,  &:after {
+        content: " ";
+    }
+
+    &:before {
+        top: 0;
+    }
+    &:after {
+        bottom: 0;
+    }
 
 
-.header__burger._active span {
-    transform: scale(0);
-   
+    &._active {
+    
+        span {
+            transform: scale(0);
+        }
+        &:before {
+            top: 50%;
+            transform: rotate(-45deg) ;
+            background-color: $text__color;
+        }
+        &:after {
+            bottom: 40%;
+            transform: rotate(45deg);
+            background-color: $text__color;
+        }
+    }
 }
 
-.header__burger._active:before {
-    top: 50%;
-    transform: rotate(-45deg) ;
-    background-color: $text__color;
-}
-
-.header__burger._active:after {
-    bottom: 40%;
-    transform: rotate(45deg);
-    background-color: $text__color;
-}
-
-
-.header__burger:before,  .header__burger:after,   .header__burger span{
-    left: 0;
-
-    position: absolute;
-    height: 15%;
-    width: 100%;
-    transition: all 0.3s ease-in;
-    background-color: $text__color;
-}
-.header__burger span {
-    top: 50%;
-    transform: translate(0px, -50%);
-}
-.header__burger:before,  .header__burger:after {
-    content: " ";
-}
-.header__burger:before {
-    top: 0;
-}
-.header__burger:after {
-    bottom: 0;
-}
 
 
 
 .header__nav {
     padding-top: 100px;
+
     z-index: 4;
     font-size: 1em;
     position: fixed;
@@ -103,7 +112,7 @@ button.down {
     left: 0;
     flex-direction: column;
     overflow: auto;
-   width: 100%;
+    width: 100%;
    
    text-align: center;
    text-transform: uppercase;
@@ -111,12 +120,13 @@ button.down {
    
 
    transition: all 0.3s ease 0s;
-   transform: translate(0px, -100vh);
+   transform: translate(0px, -100%);
 
 }
 .header__nav._active {
     transform: translate(0px, 0px);
     background-color: rgba(0, 0, 0, 0.856);
+    height: 100%;
    
 }
 
@@ -136,11 +146,23 @@ button.down {
     background-color: $text__color;
 }
 
+.header__intro{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+
 @media (min-width: 1000px) {
 
     .header {
         display: flex;
         flex-direction: column;
+        max-width: 1200px;
     }
     .header__burger {
         display: none;
@@ -162,6 +184,7 @@ button.down {
         z-index: 0;
        position: static;
         background-color: $background__color;
+        min-height: 65px;
         
         font-size: 1em;
         padding: 0;
@@ -174,7 +197,7 @@ button.down {
         display: flex;
         flex-direction: row;
         width: 100%;
-        max-width: 1200px;
+        
        
     }
     .header__nav-item {
@@ -202,9 +225,7 @@ button.down {
         transition: all 0.5s ease-out;
     }
 
-    .header__intro {
-        flex-grow: 1;
-    }
+    
 
 }
 
@@ -225,10 +246,8 @@ button.down {
 
 
 @media (min-width: 1500px) {
-.header__row {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+.header {
+   
     max-width: 1500px;
    
 }
