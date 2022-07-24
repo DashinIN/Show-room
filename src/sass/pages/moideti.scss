@@ -49,6 +49,20 @@
         filter: blur(1px);    
 }
 
+.flexitem__title {
+    
+    transform: translate(20%, 0);
+    opacity: 0;
+    color: $text__color;
+    backdrop-filter:brightness(0.4);
+    font-size: calc(15px + 20 * ( 100vw / 1180 ));
+    font-weight: bold;
+    position: absolute;
+    top:90%;
+    right: 1%;
+    transition: all 0.5s ease-out;
+}
+
 .flexitem:hover img.bg, .flexitem:focus-within img.bg {
     
     opacity: 1;
@@ -84,6 +98,12 @@
      
        
     }
+
+    .flexitem__title.hover {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    
     .flexitem1, .flexitem3{
         flex-basis: 35%;
     }

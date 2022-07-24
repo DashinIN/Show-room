@@ -3,6 +3,10 @@
 @import "../components/preloader";
 
 
+.header__nav-item:nth-child(3) a{
+    color: $background__color;
+    background-color: $text__color;
+}
 
 .main {
 
