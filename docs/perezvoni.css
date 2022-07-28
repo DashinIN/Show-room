@@ -383,7 +383,7 @@ body._lock {
 }
 
 button.down {
-  background: url(../../img/icon-scroll-down-white.svg) transparent;
+  background: url(./img/icon-scroll-down-white.svg) transparent;
   position: absolute;
   left: 50%;
   top: 90%;
