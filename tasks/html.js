@@ -9,7 +9,7 @@ const htmlmin = require("gulp-htmlmin");
 
 const html = () => {
     return src(myPath.html.src)
-    .pipe(fileInclude())
+    .pipe(fileInclude()) 
     .pipe(htmlmin({
         collapseWhitespace: true
     }))
