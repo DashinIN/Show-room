@@ -4,7 +4,6 @@
     "description": "My proj",
     "main": "docs/index.html",
     "author": "DashinIN",
-    
     "scripts": {
         "build:sass": "sass  --no-source-map src/sass:docs/css",
         "copy:img": "copyfiles -u 1 ./src/img/**/* docs",
@@ -23,14 +22,27 @@
     },
     "dependencies": {
         "autoprefixer": "^10.4.2",
-        "browser-sync": "^2.27.7",
         "copyfiles": "^2.4.1",
         "cssnano": "^5.0.17",
         "gsap": "^3.10.4",
         "locomotive-scroll": "^4.1.4",
         "npm-run-all": "^4.1.5",
         "onchange": "^7.1.0",
-        "postcss-cli": "^9.1.0",
-        "sass": "^1.49.8"
+        "postcss-cli": "^9.1.0"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.27.10",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^8.0.0",
+        "gulp-csso": "^4.0.1",
+        "gulp-file-include": "^2.3.0",
+        "gulp-group-css-media-queries": "^1.2.2",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-imagemin": "^7.1.0",
+        "gulp-rename": "^2.0.0",
+        "gulp-sass": "^5.1.0",
+        "gulp-shorthand": "^1.1.0",
+        "gulp-terser": "^2.1.0",
+        "sass": "^1.54.0"
     }
 }

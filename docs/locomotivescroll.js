@@ -1,0 +1,1 @@
+const scroll=new LocomotiveScroll({el:document.querySelector("[data-scroll-container]"),smooth:!0,mobile:{smooth:!0},tablet:{smooth:!0,breakpoint:0}}),headButton=document.querySelector(".down");headButton.addEventListener("click",(()=>{scroll.scrollTo(".main")}));
