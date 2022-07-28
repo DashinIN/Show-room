@@ -3,8 +3,9 @@ const browserSync = require("browser-sync").create();
 
 const myPath = require("./config/path.js");
 
-//plugins
+//tasks
 const html = require("./tasks/html.js");
+const scss = require("./tasks/scss.js");
 
 //clear
 
@@ -26,12 +27,13 @@ const watcher = () => {
 }
   
   exports.html = html;
+  exports.scss = scss;
   exports.watch = watcher;
 
 
   
 
   exports.dev = series(
-    html, 
+    parallel(html, scss),
     parallel( watcher, server)
   );
