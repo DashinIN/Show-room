@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./yatebya.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
     <title>Ага</title>
 </head>
 <body data-scroll-container>
@@ -12,10 +13,10 @@
     <div class="logo-back">
         <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
     </div>
+        
 
 
-
-    <div class="header">
+    <div class="header" >
         <div class="header__burger">
             <span></span>
         </div>
@@ -38,18 +39,35 @@
 
     </div>
 
-    <main class="main">
+    <main class="main" >
         <section class="intro">
-            <div class="main__item left-part">
-               
-            </div>
-            <div class="main__item right-part">
-            
-            </div>
+            <div class="intro__item item-top"
+            data-scroll
+            data-scroll-sticky
+            data-scroll-target=".intro">
+            <a href="" class="video">
+                <video autoplay  loop>
+                <source src="./img/Anacondaz — Серым (Official Music Video, 2021).mp4" type="video/mp4">
+              </video>
+            </a>
+        </div>
+            <div class="intro__item item-bot"></div>
+          
         </section>
-        <section class="songs">
 
+
+        <section class="songs">
+            <div class="songs__row">
+                <div class="songs__row-item"></div>
+                <div class="songs__row-item"></div>
+                <div class="songs__row-item"></div>
+                <div class="songs__row-item"></div>
+                <div class="songs__row-item"></div>
+                <div class="songs__row-item"></div>
+            </div>
         </section>
+
+
         <section class="end">
 
         </section>
@@ -59,7 +77,7 @@
     
 
    
-    <script src="./script.js"></script>
+  
     <script src="./header.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
     <script src="./locomotivescroll.js"></script>

@@ -2,16 +2,6 @@
 
 
 document.addEventListener('DOMContentLoaded', function() {
-	
-	
-	let a = document.querySelector(".logo-back");
-  let b = document.querySelector("body");
-  b.style.overflow = "all";
-	a.classList.add("clear");
-
-});
-
-document.addEventListener('DOMContentLoaded', function() {
 const audio = document.querySelectorAll('audio');
 for (let i in audio) {
   audio[i].volume=0.3;
@@ -29,4 +19,7 @@ items[i].addEventListener("mouseenter", () => { title[i].classList.add("hover");
 items[i].addEventListener("mouseleave", () => { title[i].classList.remove("hover"); audio[i].pause();});
 }
 });
+
+
+    
 
