@@ -40,4 +40,16 @@ a {
 
 .video__area {
     cursor: pointer;
+    
+    
 }
+
+
+
+
+
+.paused {
+    filter: grayscale(0.9);
+    transition: all 0.3s ease;
+}
+

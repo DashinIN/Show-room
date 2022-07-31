@@ -53,23 +53,23 @@ let videoWork = (maxVolume) => {
 
             videoArea[i].addEventListener("click", () => {
                           
-                if(!video[i].classList.contains(".paused"))  { // если видео не на паузе то
+                if(!video[i].classList.contains("paused"))  { // если видео не на паузе то
                     video[i].pause();                
                     console.log("pause");           // ставим на паузу при клике
-                    video[i].classList.toggle(".paused") ;       // добавляем класс на паузе
+                    video[i].classList.toggle("paused") ;       // добавляем класс на паузе
                     } else {
                         video[i].play();     
                         console.log("play");                       //если видео на паузе то запускаем
-                         video[i].classList.toggle(".paused");  //класс паузы убирается
+                         video[i].classList.toggle("paused");  //класс паузы убирается
                     }      
 
              });
           
         
     
-        videoArea[i].addEventListener("focusin", () => {  console.log("eee"); video[i].volume=maxVolume;});
+        videoArea[i].addEventListener("focusin", () => {   video[i].volume=maxVolume;});
         videoArea[i].addEventListener("focusout", () => {  video[i].volume=0;});
-        videoArea[i].addEventListener("mouseenter", () => { console.log("eee"); video[i].volume=maxVolume;});
+        videoArea[i].addEventListener("mouseenter", () => { video[i].volume=maxVolume;});
         videoArea[i].addEventListener("mouseleave", () => {  video[i].volume=0;});
     
             
@@ -87,7 +87,7 @@ let audioPlay = (maxVolume) => {
         audio[i].volume=maxVolume;
        }
        for (let i=0;   i<=items.length-1; i++) {
-            items[i].addEventListener("focusin", () => { title[i].classList.add("hover"); audio[i].play();});
+            items[i].addEventListener("focusin", () => { title[i].classList.add("hover") ; audio[i].play();});
             items[i].addEventListener("focusout", () => { title[i].classList.remove("hover"); audio[i].pause();});
             items[i].addEventListener("mouseenter", () => { title[i].classList.add("hover"); audio[i].play();});
             items[i].addEventListener("mouseleave", () => { title[i].classList.remove("hover"); audio[i].pause();});

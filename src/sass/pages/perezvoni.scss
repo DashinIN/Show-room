@@ -35,7 +35,7 @@
 
 
  .flexitem{
-    height: 50vh;
+    height: 70vh;
     background-color: rgb(86, 58, 148);
     font-size: 22px;
     font-weight: 300;
@@ -43,6 +43,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 
 .linkarea {
@@ -59,19 +60,22 @@
 
 .flexitem__title {
     
-    transform: translate(20%, 0);
+    
     opacity: 0;
     color: $text__color;
     backdrop-filter:brightness(0.4);
     font-size: calc(15px + 20 * ( 100vw / 1180 ));
     font-weight: bold;
-    position: absolute;
-    top:90%;
-    right: 1%;
-    transition: all 0.5s ease-out;
+   position: absolute;
+   right: 10%;
+   text-align: center;
+    transition: opacity 0.5s ease-out;
 }
 
-
+.flexitem__title.hover {
+  
+    opacity: 1;
+}
 
  img.bg {
     
@@ -96,8 +100,8 @@
 }
 img.album__image {
     position: relative;
-    margin: 10% auto;
-    height: 50%;
+    margin: 20vh auto;
+    height: 50vw;
     filter: brightness(0.85);
   
     object-fit: cover;
@@ -122,6 +126,7 @@ img.album__image {
     
     opacity: 1;
     filter: blur(0px);
+    transform: scale(1.2);
 }
 
   
@@ -141,12 +146,27 @@ img.album__image {
     background-color: rgb(139, 137, 7);
 }
 
-
+.flexitem__title.hover {
+    transform: translate(0, 0);
+    opacity: 1;
+}
    
 @media (min-width:500px) {
 
- 
-  
+    .flexitem__title {
+    
+       
+        opacity: 0;
+        color: $text__color;
+        backdrop-filter:brightness(0.4);
+        font-size: calc(15px + 20 * ( 100vw / 1180 ));
+        font-weight: bold;
+        position: absolute;
+        top:90vh;
+        right: 1%;
+        transition: all 0.5s ease-out;
+        
+    }
 
 
     .flexbox {
