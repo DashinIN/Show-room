@@ -10,14 +10,25 @@
 </head>
 <body data-scroll-container>
    
+    
+    
+
+
     <div class="logo-back">
        
             <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
         
     </div>
+    <div class="audiocheck">
+        <div class="audiocheck__title">Разрешить проигрывать звук?</div>
+        <div class="audiocheck__left">Нет</div>
+        <div class="audiocheck__right">Да</div>
+    </div>
 
 
     <div class="wraper">
+      
+      
 
     <div class="header">
         <div class="header__burger">
@@ -35,14 +46,13 @@
         </div>
         </nav>
         
-        <div class="header__intro" 
+        <div class="header__intro video__area" 
             data-scroll
             data-scroll-position="top"
             data-scroll-speed="2" >
-            <video autoplay muted loop class="header__intro-background">
+            <video loop class="header__intro-background">
                 <source src="./img/vid1.mp4" type="video/mp4">
               </video>
-           
             <img src="./img/1qV0djuTrHY.webp" alt="" class="album__image"
             data-scroll data-scroll-speed="2">
 
@@ -65,7 +75,7 @@
 
  <div class="flexbox main">
     <div class="column column1">
-        <div class="flexitem flexitem1" data-scroll >
+        <div class="flexitem flexitem1 audioitem" data-scroll >
             <img src="img/1.webp" loading="lazy" alt="" class="bg">
             <div class="content"></div> 
             <audio>
@@ -74,7 +84,7 @@
             <a href="#" class="linkarea"></a>
         </div>
        
-        <div class="flexitem flexitem2"data-scroll >
+        <div class="flexitem flexitem2 audioitem"data-scroll >
             <img src="img/2.webp" loading="lazy" alt="" class="bg">
             <div class="content"></div> 
             <audio>
@@ -87,7 +97,7 @@
    
     
     <div class="column column2">
-        <div class="flexitem flexitem1" data-scroll>
+        <div class="flexitem flexitem1 audioitem" data-scroll>
             <img src="img/3.webp" loading="lazy" alt="" class="bg">
             <div class="content"></div> 
             <audio>
@@ -95,7 +105,7 @@
             </audio>
             <a href="#" class="linkarea"></a>
         </div>
-        <div class="flexitem flexitem2" data-scroll>
+        <div class="flexitem flexitem2 audioitem" data-scroll>
             <img src="img/4.webp" loading="lazy" alt="" class="bg">
             <div class="content"></div> 
             <audio>
@@ -106,7 +116,7 @@
     </div>
     
     <div class="column column3">
-        <div class="flexitem flexitem1" data-scroll>
+        <div class="flexitem flexitem1 audioitem" data-scroll>
             <img src="img/5.webp" loading="lazy" alt="" class="bg">
             <div class="content"></div> 
             <audio>
@@ -114,7 +124,7 @@
             </audio>
             <a href="#" class="linkarea"></a>
         </div>
-        <div class="flexitem flexitem2" data-scroll>
+        <div class="flexitem flexitem2 audioitem" data-scroll>
             <img src="img/6.webp" loading="lazy" alt="" class="bg">
             <div class="content"></div> 
             <audio>
@@ -123,21 +133,23 @@
             <a href="#" class="linkarea"></a>
         </div>
     </div>
-    <div class="flexitem__title " >01. Anacondaz - Когда-нибудь</div>
-    <div class="flexitem__title ">03. Anacondaz - SOS</div>
-   <div class="flexitem__title ">04. Anacondaz - Уходи</div>
-   <div class="flexitem__title ">12. Anacondaz - Выпускной</div>
-  <div class="flexitem__title ">06. Anacondaz - Девочка-деньги</div>
-   <div class="flexitem__title ">15. Anacondaz - В петлю </div>
+    <div class="flexitem__title audioitem__title" >01. Anacondaz - Когда-нибудь</div>
+    <div class="flexitem__title audioitem__title">03. Anacondaz - SOS</div>
+   <div class="flexitem__title audioitem__title">04. Anacondaz - Уходи</div>
+   <div class="flexitem__title audioitem__title">12. Anacondaz - Выпускной</div>
+  <div class="flexitem__title audioitem__title">06. Anacondaz - Девочка-деньги</div>
+   <div class="flexitem__title audioitem__title">15. Anacondaz - В петлю </div>
 </div>
+
+
 
 </div>
      
-
-    <script src="./script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+<script src="./locomotivescroll.js"></script>
     <script src="./header.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-    <script src="./locomotivescroll.js"></script>
+   
+
    
   
 </body>

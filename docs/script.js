@@ -1,1 +1,7 @@
-document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelectorAll("audio");for(let t in e)e[t].volume=.3;const t=document.querySelectorAll(".flexitem__title"),o=document.querySelectorAll(".flexitem");for(let s in o)o[s].addEventListener("focusin",(()=>{t[s].classList.add("hover"),e[s].play()})),o[s].addEventListener("focusout",(()=>{t[s].classList.remove("hover"),e[s].pause()})),o[s].addEventListener("mouseenter",(()=>{t[s].classList.add("hover"),e[s].play()})),o[s].addEventListener("mouseleave",(()=>{t[s].classList.remove("hover"),e[s].pause()}))}));
+
+
+
+
+
+    
+

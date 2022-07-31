@@ -1,1 +1,28 @@
-const scroll=new LocomotiveScroll({el:document.querySelector("[data-scroll-container]"),smooth:!0,mobile:{smooth:!0},tablet:{smooth:!0,breakpoint:0}}),headButton=document.querySelector(".down");headButton.addEventListener("click",(()=>{scroll.scrollTo(".main")}));const videoLink=document.querySelectorAll(".video"),video=document.querySelectorAll("video");video[0].volume=0;for(let e in video)videoLink[e].addEventListener("focusin",(()=>{console.log("eee"),video[e].volume=1})),videoLink[e].addEventListener("focusout",(()=>{video[e].volume=0})),videoLink[e].addEventListener("mouseenter",(()=>{console.log("eee"),video[e].volume=1})),videoLink[e].addEventListener("mouseleave",(()=>{video[e].volume=0}));
+
+
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true,
+    mobile: {
+        smooth: true
+    },
+    tablet: {
+        smooth: true,
+        breakpoint: 0,
+    }
+});
+
+
+const headButton = document.querySelector(".down")
+headButton.addEventListener("click", () => {
+    scroll.scrollTo(".main");
+}
+);
+
+
+
+
+  
+    
+
+
