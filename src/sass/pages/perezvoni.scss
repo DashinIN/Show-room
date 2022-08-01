@@ -35,7 +35,7 @@
 
 
  .flexitem{
-    height: 70vh;
+    height: 50vh;
     background-color: rgb(86, 58, 148);
     font-size: 22px;
     font-weight: 300;
@@ -53,7 +53,7 @@
 }
 .flexitem>.content {
     color: rgb(255, 255, 255);
-    position: absolute;
+   
     pointer-events: none;
     
 }
@@ -120,9 +120,20 @@ img.album__image {
 }
 
 
+.content {
+    text-align: center;
+    font-size: 26px;
+    opacity: 0;
+    position: absolute;
+    width: 50%;
+    transition: opacity 0.5s ease-out;
+    
+letter-spacing: 0.7;
+    text-shadow: 1px 1px  3px black;
+}
 
-
-.flexitem:hover img.bg, .flexitem:focus-within img.bg {
+.flexitem:hover img.bg, .flexitem:focus-within img.bg, 
+.flexitem:hover .content, .flexitem:focus-within .content   {
     
     opacity: 1;
     filter: blur(0px);
@@ -153,6 +164,10 @@ img.album__image {
    
 @media (min-width:500px) {
 
+
+    .content {
+        font-size: 18px;
+    }
     .flexitem__title {
     
        
