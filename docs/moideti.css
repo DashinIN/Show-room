@@ -462,6 +462,39 @@ button.down {
   color: rgb(24, 24, 24);
 }
 
+.header__intro-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.album__image {
+  position: relative;
+  margin: 20vh auto;
+  height: 50vw;
+  filter: brightness(0.85);
+  -o-object-fit: cover;
+  object-fit: cover;
+  opacity: 1;
+}
+
+.header__intro-title {
+  color: rgb(238, 238, 238);
+  -webkit-backdrop-filter: brightness(0.4);
+  backdrop-filter: brightness(0.4);
+  font-size: calc(10px + 2.9661016949vw);
+  position: absolute;
+  top: 70%;
+  left: 2%;
+  white-space: nowrap;
+}
+
+.header__intro-background {
+  filter: hue-rotate(160deg);
+}
+
 .flexbox {
   margin: 0rem auto;
   padding-bottom: 0rem;
@@ -535,6 +568,14 @@ img.bg {
 .flexitem__title.hover {
   transform: translate(0, 0);
   opacity: 1;
+}
+
+.header__intro-text__area {
+  z-index: 10;
+  display: flex;
+  margin-left: 0;
+  flex-direction: column;
+  max-width: 45vw;
 }
 
 @media (min-width: 500px) {
@@ -649,6 +690,18 @@ img.bg {
     top: 70px;
     transform: scaleX(0);
     transition: all 0.5s ease-out;
+  }
+
+  .header__intro-text__area {
+    margin-left: 50%;
+  }
+
+  img.album__image {
+    position: absolute;
+    margin: 0ex;
+    height: 50vh;
+    right: 60%;
+    top: 10%;
   }
 }
 
