@@ -122,6 +122,7 @@ button.down {
   width: 49px;
   height: 17px;
   transform: translate3d(-50%, -50%, 0);
+  z-index: 3;
 }
 
 .header {
@@ -249,7 +250,7 @@ button.down {
 }
 
 .header__intro-text__area {
-  z-index: 10;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   max-width: 45vw;
@@ -706,6 +707,10 @@ img.bg {
 }
 
 @media (min-width: 1200px) {
+  button.down {
+    top: 90%;
+  }
+
   .header__nav {
     width: 100%;
     font-size: 0.9em;

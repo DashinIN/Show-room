@@ -13,7 +13,7 @@ button.down {
     height: 17px;
     background-color: transparent;
     transform: translate3d(-50%,-50%,0);
-    
+    z-index: 3;
     background-image:url(./img/icon-scroll-down-white.svg);
 }
 
@@ -156,7 +156,8 @@ button.down {
     height: 100%;
 }
 .header__intro-text__area {
-    z-index: 10;
+    z-index: 1;
+    
     display: flex;
     flex-direction: column;
     max-width: 45vw;
@@ -246,7 +247,9 @@ letter-spacing: 0.7;
 }
 
 @media (min-width: 1200px) {
-    
+    button.down {
+        top:90%;
+    }
 
     .header__nav {
         width: 100%;
