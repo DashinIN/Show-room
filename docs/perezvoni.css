@@ -659,7 +659,6 @@ img.album__image {
   position: relative;
   margin: 20vh auto;
   height: 50vw;
-  filter: brightness(0.85);
   -o-object-fit: cover;
   object-fit: cover;
   opacity: 1;

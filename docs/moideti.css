@@ -499,7 +499,7 @@ button.down {
   backdrop-filter: brightness(0.4);
   font-size: calc(10px + 2.5423728814vw);
   position: absolute;
-  top: 85%;
+  top: 75%;
   left: 2%;
   white-space: nowrap;
 }

@@ -478,28 +478,35 @@ button.down {
 .main {
   display: flex;
   flex-direction: column;
+  z-index: 5;
 }
 
 section {
-  background: blue;
+  background: rgb(24, 24, 24);
   height: 100vh;
 }
 
-.intro {
+.intro__grid {
   display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.intro__column {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-basis: 100%;
   flex-direction: column;
-  height: 150vh;
+  transition: all 0.5s ease;
 }
 
-.intro__item {
+.intro__column .video__area {
   height: 100%;
-  width: 100%;
-}
-
-.intro__item.item-top {
-  background: rgb(235, 54, 54);
-  height: 100%;
-  width: 100%;
+  flex-basis: 100%;
+  position: relative;
+  transition: all 0.5s ease;
+  filter: grayscale(0.8);
 }
 
 video {
@@ -510,35 +517,62 @@ video {
   object-fit: cover;
 }
 
-.songs {
-  background: aqua;
-  height: 100vh;
+.video__title {
+  opacity: 0;
+  color: rgb(255, 255, 255);
+  -webkit-backdrop-filter: brightness(0.4);
+  backdrop-filter: brightness(0.4);
+  font-size: calc(15px + 1.6949152542vw);
+  font-weight: bold;
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  text-align: center;
+  transition: opacity 0.5s ease-out;
+}
+
+.linkarea {
+  z-index: 6;
   width: 100%;
-}
-
-.songs__row {
   height: 100%;
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
 }
 
-.songs__row-item {
-  height: 100%;
-  min-width: 50vw;
-  border: 10px solid white;
+.intro__column:hover,
+.intro__column:focus-within {
+  flex-basis: 300%;
 }
 
-.end {
-  background: rgb(230, 24, 178);
+.video__area:hover,
+.video__area:focus-within {
+  filter: grayscale(0);
+  flex-basis: 300%;
+  outline: 2px solid rgb(24, 24, 24);
+  z-index: 6;
 }
 
-img {
+.video__area:hover .video__title,
+.video__area:focus-within .video__title {
+  opacity: 1;
+}
+
+.header__image {
   position: absolute;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  filter: brightness(0.5);
+  -o-object-position: top;
+  object-position: top;
+}
+
+.album__image {
+  position: relative;
+  margin: 20vh auto;
+  height: 50vw;
+  -o-object-fit: cover;
+  object-fit: cover;
+  opacity: 1;
 }
 
 @media (min-width: 1000px) {
@@ -603,6 +637,14 @@ img {
     top: 70px;
     transform: scaleX(0);
     transition: all 0.5s ease-out;
+  }
+
+  img.album__image {
+    position: absolute;
+    margin: 0ex;
+    height: 60vh;
+    left: 60%;
+    top: 5%;
   }
 }
 
