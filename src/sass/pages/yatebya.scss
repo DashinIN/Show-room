@@ -42,17 +42,20 @@ section {
  
 
   .video__area {
+  
     height: 100%;
     flex-basis: 100%;
     position: relative;
     transition: all .5s ease;
-    filter: grayscale(0.8);
+    filter: grayscale(0.8
+    );
 
    }
  }
 
  video {
   position: absolute;
+  padding: 5px;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -103,11 +106,13 @@ section {
   object-position: top;
  }
 
- .album__image {
+ 
+
+img.album__image {
   position: relative;
   margin: 20vh auto;
   height: 50vw;
- 
+  
 
   object-fit: cover;
   opacity: 1;
@@ -115,14 +120,12 @@ section {
  
 @media (min-width:1000px) {
 
- 
-
   img.album__image {
   position: absolute;
   margin: 0ex;
-     height: 60vh;
+     height: 50vh;
      left: 60%;
-     top:5%;
+     top:10%;
 
   }
 }
