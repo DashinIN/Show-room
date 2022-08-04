@@ -103,6 +103,17 @@ a {
 
 .video__area {
   cursor: pointer;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .paused {
@@ -215,6 +226,17 @@ a {
 
 .video__area {
   cursor: pointer;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .paused {
@@ -410,33 +432,51 @@ button.down {
   opacity: 1;
   display: flex;
   flex-direction: row;
-  color: rgb(255, 255, 255);
+  color: white;
   font-size: calc(15px + 1.6949152542vw);
   text-align: center;
   font-weight: bold;
-  text-shadow: 1px 1px 3px black;
 }
 
 .audiocheck__left {
-  background: rgb(24, 24, 24);
+  background: black;
   flex-basis: 50%;
   height: 100%;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .audiocheck__left:hover {
   background: #d62828;
 }
 
+.audiocheck__left:hover .audiocheck__promt,
+.audiocheck__right:hover .audiocheck__promt {
+  mix-blend-mode: normal;
+}
+
 .audiocheck__right {
-  background: rgb(255, 255, 255);
+  background: white;
   flex-basis: 50%;
   height: 100%;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .audiocheck__right:hover {
   background: #36b325;
+}
+
+.audiocheck__right:hover ~ .audiocheck__title {
+  mix-blend-mode: normal;
+  color: white;
+}
+
+.audiocheck__left:hover ~ .audiocheck__title {
+  mix-blend-mode: normal;
+  color: black;
+}
+
+.audiocheck__left:hover .audiocheck__promt {
+  color: black;
 }
 
 .audiocheck__title {
@@ -445,10 +485,12 @@ button.down {
   top: 30vh;
   left: 50%;
   transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
 }
 
 .audiocheck__promt {
   padding-top: 5rem;
+  mix-blend-mode: difference;
 }
 
 .lds-ellipsis {

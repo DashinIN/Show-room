@@ -8,28 +8,29 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
     <title>Ага</title>
 </head>
-<body data-scroll-container>
+<body >
     
     <div class="logo-back">
         <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
     </div>
     
     <div class="audiocheck">
-    <div class="audiocheck__title">Разрешить проигрывать звук?</div>
-    <div class="audiocheck__left">
-        <div class="audiocheck__promt">
-            Нет
+    
+        <div class="audiocheck__left">
+            <div class="audiocheck__promt">
+                Нет
+            </div>
         </div>
-    </div>
-    <div class="audiocheck__right">
-        <div class="audiocheck__promt">
-           Да
+        <div class="audiocheck__right">
+            <div class="audiocheck__promt">
+            Да
+            </div>
         </div>
+        <div class="audiocheck__title">Разрешить проигрывать звук?</div>
     </div>
-</div>
 
 
-<div class="wraper paralax">
+<div class="wraper paralax" data-scroll-container>
     <div class="header" >
         <div class="header__burger">
             <span></span>
@@ -49,7 +50,12 @@
         data-scroll
         data-scroll-position="top"
         data-scroll-speed="2" >
-        <img src="./img/ya.webp" alt="" class="header__image">
+        
+
+     
+        <img src="./img/ya.webp" alt="" class="header__image"  data-scroll data-scroll-position="top" data-scroll-speed="-12">
+     
+     
        
             <img src="./img/yamin.webp" alt="" class="album__image"
             data-scroll data-scroll-speed="2">
@@ -124,21 +130,8 @@
             </div>
         </section>
 
-        <section class="songs">
-            <div class="songs__row">
-                <div class="songs__row-item"></div>
-                <div class="songs__row-item"></div>
-                <div class="songs__row-item"></div>
-                <div class="songs__row-item"></div>
-                <div class="songs__row-item"></div>
-                <div class="songs__row-item"></div>
-            </div>
-        </section>
-
-
-        <section class="end">
-
-        </section>
+      
+      
 
     </main>
 
@@ -149,12 +142,6 @@
     <script src="./header.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
     <script src="./locomotivescroll.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-
-    <script>
-        gsap.to(".audiocheck__promt", { duration:5, y:150});
-
-    </script>
-   
+ 
 </body>
 </html>

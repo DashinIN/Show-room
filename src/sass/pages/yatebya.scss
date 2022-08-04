@@ -31,6 +31,11 @@ section {
   height: 100%;
  }
 
+ @media (max-width: 500px) {
+  .intro__grid {
+    flex-direction: column;
+  }
+ }
  .intro__column {
   width: 100%;
   height: 100%;
@@ -66,11 +71,11 @@ section {
   opacity: 0;
   color: $text__color;
   backdrop-filter:brightness(0.4);
-  font-size: calc(15px + 20 * ( 100vw / 1180 ));
+  font-size: calc(15px + 15 * ( 100vw / 1180 ));
   font-weight: bold;
   position: absolute;
-  right: 10%;
-  bottom:10%;
+  right: 5%;
+  bottom:5%;
   text-align: center;
   transition: opacity 0.5s ease-out;
  }
@@ -100,7 +105,8 @@ section {
  .header__image {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 130vh;
+  top:-30vh;
   object-fit: cover;
   filter: brightness(0.5);
   object-position: top;
@@ -117,7 +123,8 @@ img.album__image {
   object-fit: cover;
   opacity: 1;
 }
- 
+
+
 @media (min-width:1000px) {
 
   img.album__image {

@@ -21,45 +21,65 @@
   flex-direction: row;
 
 
-  color: $light__color;
+  color: white;
   font-size: calc(15px + 20 * ( 100vw / 1180 ));
   text-align: center;
   font-weight: bold;
-  text-shadow: 1px 1px  3px black;
+  
 }
 .audiocheck__left {
   flex-basis: 50%;
   height: 100%;
-  background-color: $background__color;
-  transition: all 0.3s ease;
+  background-color: black;
+  transition: background-color 0.3s ease;
  
 }
 .audiocheck__left:hover {
   background-color: #d62828;
 }
+.audiocheck__left:hover .audiocheck__promt,
+.audiocheck__right:hover .audiocheck__promt {
+  mix-blend-mode: normal;
+}
+
 
 
 .audiocheck__right {
   flex-basis: 50%;
   height: 100%;
-  background-color:  $light__color;
-  transition: all 0.3s ease;
+  background-color:  white;
+  transition: background-color 0.3s ease;
+  
+  
 }
 
 .audiocheck__right:hover {
   background-color: #36b325;
 }
-
+.audiocheck__right:hover ~ .audiocheck__title {
+  mix-blend-mode: normal;
+  color: white;
+}
+.audiocheck__left:hover ~ .audiocheck__title {
+  mix-blend-mode: normal;
+  color: black;
+}
+.audiocheck__left:hover .audiocheck__promt {
+  color: black;
+}
 .audiocheck__title {
   pointer-events: none;
   position: absolute;
   top: 30vh;
   left: 50%;
   transform: translate(-50%,-50%);
+    mix-blend-mode: difference;
+ 
 }
 
 .audiocheck__promt {
   padding-top: 5rem;
+  mix-blend-mode: difference;
   
 }
 

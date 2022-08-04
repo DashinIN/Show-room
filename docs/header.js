@@ -86,11 +86,30 @@ let audioPlay = (maxVolume) => {
     for (let i=0;   i<=audio.length-1; i++) {
         audio[i].volume=maxVolume;
        }
+
+       let audioIn = (title, i) => {
+        if (title.length===0) {
+            audio[i].play();
+        } else {
+            
+            title[i].classList.add("hover") ; audio[i].play();
+        }
+       }
+
+       let audioOut = (title, i) => {
+        if (title.length===0) {
+            audio[i].pause();
+            
+        } else {
+            title[i].classList.remove("hover") ; audio[i].pause();
+        }
+       }
+
        for (let i=0;   i<=items.length-1; i++) {
-            items[i].addEventListener("focusin", () => { title[i].classList.add("hover") ; audio[i].play();});
-            items[i].addEventListener("focusout", () => { title[i].classList.remove("hover"); audio[i].pause();});
-            items[i].addEventListener("mouseenter", () => { title[i].classList.add("hover"); audio[i].play();});
-            items[i].addEventListener("mouseleave", () => { title[i].classList.remove("hover"); audio[i].pause();});
+            items[i].addEventListener("focusin", () => { audioIn(title,i);});
+            items[i].addEventListener("focusout", () => { audioOut(title,i);});
+            items[i].addEventListener("mouseenter", () => { audioIn(title,i)});
+            items[i].addEventListener("mouseleave", () => { audioOut(title,i);});
             }
  }
     

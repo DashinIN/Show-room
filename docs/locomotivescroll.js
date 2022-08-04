@@ -3,6 +3,7 @@
 const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true,
+   
     mobile: {
         smooth: true
     },
@@ -11,6 +12,7 @@ const scroll = new LocomotiveScroll({
         breakpoint: 0,
     }
 });
+
 
 
 const headButton = document.querySelector(".down")
