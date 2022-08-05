@@ -119,17 +119,38 @@
 .flexitem__title.hover {
         transform: translate(0, 0);
         opacity: 1;
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) infinite;
     }
-    .header__intro-text__area {
+
+    img.album__image {
+        position: relative;
+        margin: 10vh auto 0;
+        height: 25vh;
+        
+      
+        object-fit: cover;
+        opacity: 1;
+      }
+
+@media (min-width:500px) {
+
+    img.album__image {
+        position: relative;
+        margin: 15vh 3rem 0;
+        height: 50vw;
+        
+      
+        object-fit: cover;
+        opacity: 1;
+      }
+
+      .header__intro-text__area {
         z-index: 10;
         display: flex;
         margin-left: 0;
         flex-direction: column;
         max-width: 45vw;
     }
-
-
-@media (min-width:500px) {
 
     .flexitem{
         height: 100vh;
@@ -187,13 +208,13 @@
     }
 
     img.album__image {
-    position: absolute;
-    margin: 0ex;
-       height: 50vh;
-       right: 60%;
-       top:10%;
-  
-    }
+        position: absolute;
+        margin: 0px;
+           height: 85%;
+           left:10%;
+           top:5%;
+           
+        }
 }
 
 

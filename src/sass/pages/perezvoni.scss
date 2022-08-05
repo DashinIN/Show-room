@@ -100,12 +100,15 @@
 }
 img.album__image {
     position: relative;
-    margin: 20vh auto;
-    height: 50vw;
-    filter: brightness(0.9);
+    margin: 10vh auto 0;
+    height: 25vh;
+    
   
     object-fit: cover;
     opacity: 1;
+    filter: brightness(0.9);
+  
+   
 }
 
 img.album__image2 {
@@ -115,10 +118,7 @@ img.album__image2 {
     transition: all 0.3s ease;
 }
 
-img.album__image2:hover {
-    opacity: 1;
-    
-}
+
 
 
 
@@ -142,8 +142,13 @@ letter-spacing: 0.7;
     
     opacity: 1;
     filter: blur(0px);
-    transform: scale(1.2);
+    animation: scale 7s infinite;
+    
+    
 }
+
+
+
 
   
 .column1>.flexitem1 {
@@ -165,6 +170,7 @@ letter-spacing: 0.7;
 .flexitem__title.hover {
     transform: translate(0, 0);
     opacity: 1;
+    
 }
    
 @media (min-width:500px) {
@@ -173,9 +179,19 @@ letter-spacing: 0.7;
     .content {
         font-size: 18px;
     }
+    img.album__image {
+        position: relative;
+        margin: 15vh 3rem 0;
+        height: 50vw;
+        
+      
+        object-fit: cover;
+        
+      }
+     
+   
     .flexitem__title {
-    
-       
+        
         opacity: 0;
         color: $text__color;
         backdrop-filter:brightness(0.4);
@@ -273,13 +289,20 @@ letter-spacing: 0.7;
 @media (min-width:1000px) {
 
     img.album__image {
-    position: absolute;
-    margin: 0ex;
-       height: 50vh;
-       left: 60%;
-       top:10%;
-  
-    }
+        position: absolute;
+        margin: 0px;
+           height: 85%;
+           right:10%;
+           top:5%;
+           
+        }
+        img.album__image2:hover {
+            opacity: 1;
+            
+        }
+        .header__intro-text__area {
+            margin-right: 50%;
+        }
 }
 
 
