@@ -8,9 +8,7 @@
     background-color: $text__color;
 }
 
-.main {
-    height: 1000vh;
-}
+
 .songwraper {
     height: 200vh;
 }
@@ -105,6 +103,60 @@ img.bg {
     max-width: 45vw;
 }
 
+.rowwraper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.row__item {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.row__item-part {
+    width: 50%;
+
+}
+.row__item1>.right__part {
+    background-color: red;
+}
+.row__item1>.left__part {
+    background-color: blueviolet;
+}
+.row__item2>.right__part {
+    background-color: rgb(4, 255, 58);
+}
+.row__item2>.left__part {
+    background-color: rgb(226, 223, 43);
+}
+.row__item3>.right__part {
+    background-color: rgb(255, 0, 255);
+}
+.row__item3>.left__part {
+    background-color: rgb(43, 226, 217);
+}
+.row__item4>.right__part {
+    background-color: rgb(47, 32, 255);
+}
+.row__item4>.left__part {
+    background-color: rgb(243, 14, 121);
+}
+.row__item1 {
+    z-index: 1;
+}
+.row__item2 >.left__part {
+    z-index: 2;
+}
+
+.row__item3 >.left__part {
+    z-index: 3;
+}
+.row__item4 >.right__part {
+    z-index: 4;
+}
 
 @media (min-width:1000px) {
 

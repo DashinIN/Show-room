@@ -108,6 +108,20 @@ img.album__image {
     opacity: 1;
 }
 
+img.album__image2 {
+    
+    opacity: 0;
+    
+    transition: all 0.3s ease;
+}
+
+img.album__image2:hover {
+    opacity: 1;
+    
+}
+
+
+
 
 
 
