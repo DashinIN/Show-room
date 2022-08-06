@@ -672,7 +672,6 @@ img.bg {
 }
 
 .header__intro-text__area {
-  z-index: 10;
   display: flex;
   margin-left: 0;
   flex-direction: column;
@@ -778,7 +777,6 @@ img.bg {
   }
 
   .header__intro-text__area {
-    z-index: 10;
     display: flex;
     margin-left: 0;
     flex-direction: column;
