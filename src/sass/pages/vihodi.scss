@@ -2,46 +2,79 @@
 @import "../components/header";
 @import "../components/preloader";
 
-
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .header__nav-item:nth-child(4) a{
     color: $background__color;
     background-color: $text__color;
 }
 
+.header__image {
+    position: absolute;
+    width: 100%;
+    height: 180vh;
+    top:-80vh;
+    object-fit: cover;
+    filter: brightness(0.5);
+    object-position: top;
+    
+   }
+
+   img.album__image {
+    position: relative;
+    margin: 10vh auto 0;
+    height: 25vh;
+    
+  
+    object-fit: cover;
+    opacity: 1;
+  }
+
 
 .songwraper {
-    height: 200vh;
+    height: 150vh;
 }
 .song {
    
-    background-color: aquamarine;
+    background-color: $background__color;
     display: flex;
     flex-direction: column;
 }
 .song__half {
     display: flex;
     align-items: center;
-    justify-content: center;
+    
 }
 
 .song__first {
     height: 70vh;
     width: 100%;
-    background-color: blue;
+    background-color: $background__color;
 }
 
 .song__last {
     width: 100%;
     height: 30vh;
-    background-color: palevioletred;
+   
+    overflow: hidden;
    
 }
-
+.song__last1 {
+background-color:rgb(82, 12, 18);
+}
+.song__last2 {
+    background-color:rgb(8, 32, 63);
+    }
 .song__text {
    
-    font-size: 50px;
-    color: white;
+    color: rgb(238, 238, 238);
+    backdrop-filter:brightness(0.4);
+    font-size: calc(40px + 25 * ( 100vw / 1180 ));
     white-space: nowrap;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .audioitem {
@@ -60,9 +93,10 @@
 }
 .content {
     text-align: center;
-    font-size: 26px;
-    opacity: 0;
+    font-size: calc(12px + 10 * ( 100vw / 1180 ));
+    color: white;
     position: absolute;
+    bottom: 20%;
     width: 50%;
     transition: opacity 0.5s ease-out;
     
@@ -76,31 +110,23 @@ img.bg {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        opacity: 0.5;
+        
         transition: all 1s;
-        filter: blur(1px);    
+        filter: grayscale(1);    
 }
 
 .audioitem:hover img.bg {
-    filter: blur(0px); 
-    opacity: 1;
+    filter: grayscale(0)
+    
 }
 
-.album__image {
-    position: relative;
-    margin: 20vh auto;
-    height: 50vw;
-    filter: brightness(0.85);
-  
-    object-fit: cover;
-    opacity: 1;
-}
+
 .header__intro-text__area {
     z-index: 10;
     display: flex;
     margin-left: 0;
     flex-direction: column;
-    max-width: 45vw;
+    
 }
 
 .rowwraper {
@@ -118,32 +144,27 @@ img.bg {
 
 .row__item-part {
     width: 50%;
+    height: 100%;
 
 }
-.row__item1>.right__part {
-    background-color: red;
-}
+
 .row__item1>.left__part {
-    background-color: blueviolet;
+    background-color:rgb(8, 32, 63);
 }
-.row__item2>.right__part {
-    background-color: rgb(4, 255, 58);
-}
+
 .row__item2>.left__part {
-    background-color: rgb(226, 223, 43);
+    
+    background: url("./img/1.webp");
 }
 .row__item3>.right__part {
-    background-color: rgb(255, 0, 255);
+    background-color:rgb(8, 32, 63);
 }
-.row__item3>.left__part {
-    background-color: rgb(43, 226, 217);
-}
+
 .row__item4>.right__part {
-    background-color: rgb(47, 32, 255);
+   
+    background: url("./img/1m.webp");
 }
-.row__item4>.left__part {
-    background-color: rgb(243, 14, 121);
-}
+
 .row__item1 {
     z-index: 1;
 }
@@ -158,8 +179,72 @@ img.bg {
     z-index: 4;
 }
 
-@media (min-width:1000px) {
 
+.text__row {
+    padding: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    font-size: calc(8px + 9 * ( 100vw / 1180 ));
+    line-height: 1.5;
+letter-spacing: 0.5;
+ color: $text__color;
+    
+}
+
+
+.text__row > p {
+    padding: 0.3rem;
+    backdrop-filter:brightness(0.4);
+   
+}
+.text__row > p+p {
+    margin-top: 1.5rem;
+}
+
+
+@media (min-width:500px) {
+    img.album__image {
+        position: relative;
+        margin: 15vh 3rem 0;
+        height: 50vw;
+        
+      
+        object-fit: cover;
+        opacity: 1;
+      }
+      .header__intro-text__area {
+        z-index: 10;
+        display: flex;
+        margin-left: 0;
+        flex-direction: column;
+        max-width: 45vw;
+    }
+}
+
+
+@media (min-width:1000px) {
+    
+    .header__intro-text__area {
+        margin-left: 50%;
+    }
+
+    img.album__image {
+        position: absolute;
+        margin: 0px;
+           height: 85%;
+           left:10%;
+           top:5%;
+           
+        }
+    .text__row {
+        padding: 3rem;
+    }
+    .text__row > p+p {
+        margin-top: 3rem;
+    }
  
     .header__intro-text__area {
         margin-left: 50%;
@@ -173,4 +258,10 @@ img.bg {
        top:10%;
   
     }
+}
+
+@media (min-width:1500px) {
+.main {
+    max-width: 1500px;
+}
 }

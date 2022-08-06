@@ -54,8 +54,7 @@
 }
 
  .flexitem{
-    height: 100vh;
-    background-color: rgb(86, 58, 148);
+    height: 70vh;
     font-size: 22px;
     font-weight: 300;
     display: flex;
@@ -112,14 +111,14 @@
 
   
 .flexitem {
-    background-color: rgb(19, 108, 190);
+    background-color: rgb(27, 113, 194);
 }
 
 
 .flexitem__title.hover {
         transform: translate(0, 0);
         opacity: 1;
-        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) infinite;
+        
     }
 
     img.album__image {

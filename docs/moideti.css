@@ -311,7 +311,6 @@ button.down {
 
 .header__intro-text__area {
   z-index: 1;
-  margin: 1rem auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -589,8 +588,7 @@ button.down {
 }
 
 .flexitem {
-  background: rgb(86, 58, 148);
-  height: 100vh;
+  height: 70vh;
   font-size: 22px;
   font-weight: 300;
   display: flex;
@@ -646,14 +644,12 @@ img.bg {
 }
 
 .flexitem {
-  background: rgb(19, 108, 190);
+  background: rgb(27, 113, 194);
 }
 
 .flexitem__title.hover {
   transform: translate(0, 0);
   opacity: 1;
-  -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
-  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
 }
 
 img.album__image {

@@ -452,7 +452,6 @@ button.down {
 
 .header__intro-text__area {
   z-index: 1;
-  margin: 1rem auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
