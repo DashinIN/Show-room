@@ -34,7 +34,7 @@
   transition: background-color 0.3s ease;
  
 }
-.audiocheck__left:hover {
+.audiocheck__left:hover, .audiocheck__left:focus {
   background-color: #d62828;
 }
 .audiocheck__left:hover .audiocheck__promt,
@@ -53,19 +53,28 @@
   
 }
 
-.audiocheck__right:hover {
+.audiocheck__right:hover, .audiocheck__right:focus  {
   background-color: #36b325;
 }
-.audiocheck__right:hover ~ .audiocheck__title {
+.audiocheck__right:hover ~ .audiocheck__title,
+.audiocheck__right:focus~ .audiocheck__title {
   mix-blend-mode: normal;
   color: white;
 }
-.audiocheck__left:hover ~ .audiocheck__title {
+.audiocheck__left:hover ~ .audiocheck__title,
+.audiocheck__left:focus ~ .audiocheck__title {
   mix-blend-mode: normal;
   color: black;
 }
-.audiocheck__left:hover .audiocheck__promt {
+.audiocheck__left:hover .audiocheck__promt,
+.audiocheck__left:focus .audiocheck__promt  {
   color: black;
+  mix-blend-mode: normal;
+}
+.audiocheck__right:hover .audiocheck__promt,
+.audiocheck__right:focus .audiocheck__promt  {
+  color: rgb(255, 255, 255);
+  mix-blend-mode: normal;
 }
 .audiocheck__title {
   pointer-events: none;
