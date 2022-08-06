@@ -1,5 +1,6 @@
 @import "../global";
 @import "../components/header";
+@import "../components/footer";
 @import "../components/preloader";
 
 
@@ -155,7 +156,6 @@ img.album__image {
      
   }
   .header__intro-text__area {
-    margin-top: 5vh;
     margin-right: 50%;
 }
 }

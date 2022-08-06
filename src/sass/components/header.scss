@@ -7,12 +7,12 @@ body._lock {
 
 button.down {
     position: absolute;
-    left: 45%;
+   
     top: 90%;
     width: 49px;
     height: 17px;
     background-color: transparent;
-    transform: translate3d(-50%,-50%,0);
+    transform: translate(-50%,-50%);
     z-index: 3;
     background-image:url(./img/icon-scroll-down-white.svg);
 }
@@ -187,6 +187,11 @@ letter-spacing: 0.5;
  font-size: calc(12px + 5 * ( 100vw / 1180 ));
 }
 @media (min-width: 500px) {
+
+
+    button.down {
+        left: 47%;
+    }
 .header__intro{
     flex-direction: row;
     align-items: flex-start;

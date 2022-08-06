@@ -15,9 +15,15 @@ const scroll = new LocomotiveScroll({
 
 
 
-const headButton = document.querySelector(".down")
+const headButton = document.querySelector(".down");
 headButton.addEventListener("click", () => {
     scroll.scrollTo(".main");
+}
+);
+
+const footerButton = document.querySelector(".footer__button");
+footerButton.addEventListener("click", () => {
+    scroll.scrollTo(".header");
 }
 );
 
