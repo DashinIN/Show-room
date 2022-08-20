@@ -1,7 +1,7 @@
 const pathSrc = "./src";
 const pathDest = "./docs";
 
-module.exports = {
+export default {
     root: pathDest,
     html: {
         src: pathSrc + "/html/*.html",

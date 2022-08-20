@@ -1,27 +1,31 @@
-const {src, dest} = require("gulp");
+import gulp from "gulp";
 
-const myPath = require("../config/path.js");
+import myPath from "../config/path.js";
 
 
-const autoprefixer = require("gulp-autoprefixer");
-const csso = require("gulp-csso"); //css minifier
-const rename = require("gulp-rename");
-const shorthand = require("gulp-shorthand"); //css shothand styles
-const groupCssMediaQueries = require("gulp-group-css-media-queries"); //sort media queries
-const sass =  require("gulp-sass")(require("sass"));
+import autoprefixer from "gulp-autoprefixer";
+import csso from "gulp-csso"; //css minifier
+import rename from "gulp-rename";
+import shorthand from "gulp-shorthand"; //css shothand styles
+
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+const sass = gulpSass( dartSass );
+    
+
+
+import browserSync from "browser-sync";
 
 
 const scss = () => {
-    return src(myPath.scss.src /*, {sourcemaps:true}*/)
+    return gulp.src(myPath.scss.src /*, {sourcemaps:true}*/)
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(shorthand())
-    .pipe(groupCssMediaQueries())
-    .pipe(dest(myPath.scss.dest/*, {sourcemaps:true}*/))
+    .pipe(gulp.dest(myPath.scss.dest/*, {sourcemaps:true}*/))
     .pipe(rename({suffix:".min"}))
     .pipe(csso())
-    .pipe(dest(myPath.scss.dest/*, {sourcemaps:true}*/ ))
+    .pipe(gulp.dest(myPath.scss.dest/*, {sourcemaps:true}*/ ))
+    .pipe(browserSync.stream())
 }
-
-
-module.exports = scss;
+export default scss;

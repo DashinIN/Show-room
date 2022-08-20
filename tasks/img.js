@@ -1,17 +1,17 @@
-const {src, dest} = require("gulp");
+import gulp from "gulp";
+import browserSync from "browser-sync"; 
+import myPath from "../config/path.js";
 
-const myPath = require("../config/path.js");
 
+import imagemin from "gulp-imagemin";
 
-const imagemin = require("gulp-imagemin");
-
-const img = () => {
-    return src(myPath.img.src)
+const  img = () => {
+    return gulp.src(myPath.img.src)
     .pipe(imagemin(/*{
         verbose:true
     }*/))
-    .pipe(dest(myPath.img.dest))
+    .pipe(gulp.dest(myPath.img.dest))
+    .pipe(browserSync.stream())
 }
 
-
-module.exports = img;
+export default  img 

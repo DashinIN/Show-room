@@ -1,19 +1,21 @@
-const {src, dest} = require("gulp");
-
-const myPath = require("../config/path.js");
+import gulp from "gulp";
+import browserSync from "browser-sync"; 
+import myPath from "../config/path.js";
 
 //plugins
-const fileInclude = require("gulp-file-include"); // HTML шаблонизатор
-const htmlmin = require("gulp-htmlmin"); 
+import fileInclude from "gulp-file-include"; // HTML шаблонизатор
+import htmlmin from "gulp-htmlmin"; 
+
 
 
 const html = () => {
-    return src(myPath.html.src)
+    return gulp.src(myPath.html.src)
     .pipe(fileInclude()) 
     .pipe(htmlmin({
         collapseWhitespace: true
     }))
-    .pipe(dest(myPath.html.dest));
+    .pipe(gulp.dest(myPath.html.dest))
+    .pipe(browserSync.stream())
 }
 
-module.exports = html;
+export default html;

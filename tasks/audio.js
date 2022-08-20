@@ -1,15 +1,14 @@
-const {src, dest} = require("gulp");
-
-const myPath = require("../config/path.js");
+import gulp from "gulp";
+import browserSync from "browser-sync"; 
+import myPath from "../config/path.js";
 
 
 
 
 const audio = () => {
-    return src(myPath.audio.src)
-   
-    .pipe(dest(myPath.audio.dest))
+    return gulp.src(myPath.audio.src)
+    .pipe(gulp.dest(myPath.audio.dest))
+    .pipe(browserSync.stream())
 }
 
-
-module.exports = audio;
+export default audio ;

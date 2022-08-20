@@ -4,6 +4,7 @@
     "description": "My proj",
     "main": "docs/index.html",
     "author": "DashinIN",
+    "type": "module",
     "scripts": {
         "build:sass": "sass  --no-source-map src/sass:docs/css",
         "copy:img": "copyfiles -u 1 ./src/img/**/* docs",
