@@ -437,12 +437,6 @@ button.down {
   }
 }
 
-@media (min-width: 1500px) {
-  .header {
-    max-width: 1500px;
-  }
-}
-
 .footer {
   display: flex;
   flex-direction: column;
@@ -512,12 +506,6 @@ button.down {
   }
 }
 
-@media (min-width: 1500px) {
-  .footer {
-    max-width: 1500px;
-  }
-}
-
 .logo-back {
   background: rgb(24, 24, 24);
   pointer-events: none;
@@ -569,7 +557,7 @@ button.down {
 
 .audiocheck__right:hover,
 .audiocheck__right:focus {
-  background: #36b325;
+  background: #23eb11;
 }
 
 .audiocheck__right:hover ~ .audiocheck__title,
@@ -768,12 +756,6 @@ section {
 @media (max-width: 500px) {
   .intro__grid {
     flex-direction: column;
-  }
-}
-
-@media (min-width: 1500px) {
-  .intro__grid {
-    max-width: 1500px;
   }
 }
 
