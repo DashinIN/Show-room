@@ -1,5 +1,4 @@
-
-#Music album gallery
+## Music album gallery
 
 Интерактивное приложение - каждая страница представляет отдельный альбом музыкальной группы. Уделялось внимание взаимодействию с видео и аудио, использовались современные библиотеки для анимаций
 
@@ -8,3 +7,4 @@
 - [Все тут](https://dashinin.github.io/Show-room/)
 
 ![App Screenshot](https://i.pinimg.com/originals/95/29/6e/95296e40bc67ab62fa5e1d7b1fd6b26a.gif)
+
