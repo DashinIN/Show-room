@@ -1,3 +1,10 @@
-# Anacondaz album gallery
-Anacondaz album gallery
-Watch [here](https://dashinin.github.io/Show-room/)
+
+#Music album gallery
+
+Интерактивное приложение - каждая страница представляет отдельный альбом музыкальной группы. Уделялось внимание взаимодействию с видео и аудио, использовались современные библиотеки для анимаций
+
+## Посмотреть
+
+- [Все тут](https://dashinin.github.io/Show-room/)
+
+![App Screenshot](https://i.pinimg.com/originals/95/29/6e/95296e40bc67ab62fa5e1d7b1fd6b26a.gif)
